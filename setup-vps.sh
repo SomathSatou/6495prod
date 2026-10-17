@@ -18,7 +18,13 @@ systemctl reload nginx
 
 echo "==> 3/4 Build + démarrage du conteneur"
 cd "$SITE"
-docker compose up -d --build
+if docker compose version >/dev/null 2>&1; then
+  docker compose up -d --build
+else
+  docker build -t book-6495prod .
+  docker rm -f book-6495prod 2>/dev/null || true
+  docker run -d --name book-6495prod --restart unless-stopped -p 127.0.0.1:8082:80 book-6495prod
+fi
 
 echo "==> 4/4 Certificat HTTPS"
 if curl -sI --max-time 5 http://127.0.0.1:8082/ >/dev/null; then
