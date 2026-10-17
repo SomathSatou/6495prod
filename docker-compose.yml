@@ -1,0 +1,9 @@
+services:
+  book:
+    build: .
+    image: book-6495prod
+    container_name: book-6495prod
+    restart: unless-stopped
+    # Exposé uniquement en localhost : le nginx hôte fait le TLS + reverse-proxy.
+    ports:
+      - "127.0.0.1:8082:80"
