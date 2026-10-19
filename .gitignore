@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sources DA volumineuses (~84 Mo) — les assets utilisés sont copiés dans public/
+3.Livrables/
+3.Livrables.rar

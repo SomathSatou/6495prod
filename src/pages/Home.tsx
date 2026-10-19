@@ -5,9 +5,9 @@ export default function Home() {
   const featured = WORKS.slice(0, 3)
   return (
     <main>
-      {/* Hero — dégradé du logo */}
+      {/* Hero — dégradé officiel de la charte */}
       <section className="gradient-band px-6 md:px-10 py-20 md:py-28">
-        <img src="/logo.jpg" alt="6495prod" className="w-24 md:w-32 rounded-lg shadow-lg mb-8" />
+        <img src="/logo-principal-decoupe.png" alt="6495prod" className="h-32 md:h-44 w-auto mb-8" />
         <p className="font-display uppercase tracking-widest text-sm text-text/80">
           Book — production audiovisuelle
         </p>

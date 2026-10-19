@@ -49,36 +49,39 @@ avec visuels + vidéos embarquées.
 
 ---
 
-## 3. Direction artistique (d'après le logo Instagram)
+## 3. Direction artistique — charte officielle (`3.Livrables/`)
 
-Logo récupéré (`logo-6495-instagram.jpg`) : chiffres **6495** blancs,
-entrelacés, graisse forte, sans-serif géométrique — sur dégradé
-**rouge vif → orange → bordeaux foncé** (coins sombres). Bandeau inférieur
-« Mes services » blanc sur fond rouge-orangé.
+Charte du graphiste (Tanguy Dubois, nov. 2025) : référence **brutaliste /
+architecturale**, typographie audacieuse, **noir & blanc** — « aller à
+l'essentiel ». Le dégradé feu est la variante réservée aux réseaux sociaux
+(plus tape-à-l'œil dans les feeds).
 
-### Palette proposée
+### Palette officielle
 
 | Token        | Valeur       | Usage                                    |
 |--------------|--------------|------------------------------------------|
-| `bg`         | `#12060a`    | fond principal, quasi-noir bordeaux      |
-| `surface`    | `#1e0b10`    | cartes, sections                         |
-| `accent`     | `#ff4d1f`    | rouge-orangé vif du logo (CTA, hover)    |
-| `accentDeep` | `#8b0f14`    | bordeaux, dégradés                       |
-| `text`       | `#f5f0ed`    | blanc cassé                              |
-| `muted`      | `#b8a9a6`    | texte secondaire                         |
+| `ink`        | `#0c0c0c`    | very dark grey — fond principal          |
+| `accent`     | `#f77002`    | orange — lumière des projecteurs         |
+| `accentDeep` | `#cc0000`    | boston university red — intensité        |
+| `text`       | `#ffffff`    | blanc                                    |
+| `muted`      | `white/60`   | texte secondaire                         |
+| `surface`    | `white/5`    | cartes / sections                        |
 
 ### Typographie
 
-- **Display/titres** : sans-serif géométrique gras — *Space Grotesk* ou
-  *Archivo Black* (écho aux chiffres du logo), chiffres en features tabulaires
-- **Corps** : *Inter* (déjà la base du portfolio, lisible)
+- **Primaire / titres** : *Rinter* (woff2 self-hosté, `public/fonts/`) —
+  contemporaine, architecturale, digitale
+- **Secondaire / corps** : *Biryani* (Google Fonts) — rondeur contrastante
 
 ### Gestes graphiques
 
-- Dégradé logo en fond de hero et en bandeaux de section (comme « Mes services »)
-- Logo 6495 en watermark discret / favicon
-- Thumbnails vidéo plein cadre, ratio 16:9, hover avec titre glissant
-- Numérotation des sections (01, 02…) qui rappelle le « 6495 »
+- Logo principal vertical « 6495 / prod. » blanc sur transparent
+- **Scanimate** : motif de barres verticales (carte de visite lenticulaire)
+  repris en frise animée `.scanimate-bars` (footer) + carte affichée sur
+  la page contact
+- Dégradé officiel (`gradient.webp`) en fond de hero uniquement
+- Licence : ne pas modifier le logo, utiliser uniquement les couleurs
+  de la charte
 
 ---
 

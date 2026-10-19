@@ -1,16 +1,24 @@
 @import "tailwindcss";
 
-@theme {
-  /* DA dérivée du logo 6495 (blanc sur dégradé rouge→orange→bordeaux) */
-  --color-ink: #12060a;          /* fond principal, quasi-noir bordeaux */
-  --color-surface: #1e0b10;      /* cartes / sections */
-  --color-accent: #ff4d1f;       /* rouge-orangé vif du logo */
-  --color-accent-deep: #8b0f14;  /* bordeaux, extrémité du dégradé */
-  --color-text: #f5f0ed;         /* blanc cassé */
-  --color-muted: #b8a9a6;        /* texte secondaire */
+@font-face {
+  font-family: "Rinter";
+  src: url("/fonts/rinter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
-  --font-display: "Space Grotesk", "Archivo", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+@theme {
+  /* DA officielle 6495prod (charte) : noir & blanc brutaliste + accents feu */
+  --color-ink: #0c0c0c;          /* very dark grey — fond principal */
+  --color-surface: rgb(255 255 255 / 0.05); /* cartes / sections */
+  --color-accent: #f77002;       /* orange — lumière des projecteurs */
+  --color-accent-deep: #cc0000;  /* boston university red */
+  --color-text: #ffffff;
+  --color-muted: rgb(255 255 255 / 0.6);
+
+  --font-display: "Rinter", system-ui, sans-serif;
+  --font-body: "Biryani", system-ui, sans-serif;
 }
 
 @layer base {
@@ -21,7 +29,7 @@
 
 @layer components {
   .gradient-band {
-    background: linear-gradient(115deg, var(--color-accent-deep) 0%, var(--color-accent) 45%, #ff7a2e 75%, var(--color-accent-deep) 100%);
+    background: url("/gradient.webp") center / cover no-repeat;
   }
   .section-title {
     @apply font-display text-2xl md:text-4xl font-bold tracking-tight;
@@ -33,6 +41,29 @@
     @apply text-text;
   }
   .card {
-    @apply bg-surface rounded-lg overflow-hidden transition-transform duration-200 hover:-translate-y-1;
+    @apply bg-surface border border-white/10 rounded-lg overflow-hidden transition-transform duration-200 hover:-translate-y-1;
+  }
+  .scanimate-bars {
+    background-image: repeating-linear-gradient(
+      90deg,
+      #ffffff 0 3px,
+      transparent 3px 9px
+    );
+    animation: scanimate 6s linear infinite;
+  }
+}
+
+@keyframes scanimate {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanimate-bars {
+    animation: none;
   }
 }
