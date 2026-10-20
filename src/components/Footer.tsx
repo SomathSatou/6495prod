@@ -12,6 +12,12 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/mehdi-bouqsim-7870883a1" target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
           LinkedIn
         </a>
+        <a href="https://x.com/ismehdi22" target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
+          X
+        </a>
+        <a href="https://www.tiktok.com/@ismehdi22" target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
+          TikTok
+        </a>
         <a href="https://infoscope.live/" target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
           Infoscope
         </a>

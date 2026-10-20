@@ -60,12 +60,28 @@ export const WORKS: Work[] = [
 
   // ——— Portfolio (reportages & campagnes) ———
   {
+    slug: 'campagne-municipale-2026-trelaze',
+    title: 'Campagne municipale 2026 — Trélazé',
+    category: 'portfolio',
+    role: 'Campagne numérique',
+    description: 'Campagne numérique pour les élections municipales 2026 à Trélazé.',
+    links: [{ label: 'Instagram @tae.battais', url: 'https://www.instagram.com/tae.battais/' }],
+  },
+  {
     slug: 'montagne',
     images: ['/thumbs/montagne.jpg'],
     title: 'Montagne',
     category: 'portfolio',
-    embeds: [{ url: 'https://www.youtube.com/embed/ClTIFQsDK0E' }],
-    links: [{ label: 'YouTube', url: 'https://youtu.be/ClTIFQsDK0E' }],
+    embeds: [
+      { url: 'https://www.youtube.com/embed/ClTIFQsDK0E' },
+      { url: 'https://www.youtube.com/embed/VPUC3qUQIDk' },
+    ],
+    links: [
+      { label: 'Short 1', url: 'https://youtube.com/shorts/GtUVWM0G2tQ' },
+      { label: 'Short 2', url: 'https://youtube.com/shorts/XyfUc-uoME8' },
+      { label: 'Short 3', url: 'https://youtube.com/shorts/56H9fv72hDU' },
+      { label: 'Short 4', url: 'https://youtube.com/shorts/vTFl3cwtzew' },
+    ],
   },
   {
     slug: 'routes-secondaires',
@@ -91,9 +107,14 @@ export const WORKS: Work[] = [
   },
   {
     slug: 'kapsule',
+    images: ['/thumbs/kapsule.jpg'],
     title: 'Kapsule',
     category: 'portfolio',
-    description: 'Vidéo en cours d\'import — à venir.',
+    embeds: [
+      { url: 'https://www.youtube.com/embed/QsGiPI39Uns' },
+      { url: 'https://www.youtube.com/embed/VPUC3qUQIDk' },
+    ],
+    links: [{ label: 'YouTube', url: 'https://youtu.be/QsGiPI39Uns' }],
   },
 
   // ——— Podcasts & Radio ———
